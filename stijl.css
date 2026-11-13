@@ -1,0 +1,76 @@
+/* MagDatZomaar – website. Kleuren volgens plan 8.2; geen externe lettertypen. */
+:root {
+  --achtergrond: #121216;
+  --vlak: #1C1C22;
+  --lijn: #2C2C34;
+  --tekst: #F5F5F0;
+  --zacht: #B4B4AE;
+  --rood: #DC3232;
+  --geel: #F5C518;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--achtergrond);
+  color: var(--tekst);
+  font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+main, footer {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+a { color: var(--tekst); text-decoration-color: var(--rood); text-underline-offset: 3px; }
+a:hover { color: var(--geel); }
+a:focus-visible { outline: 2px solid var(--geel); outline-offset: 3px; border-radius: 4px; }
+
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; }
+h1 { font-size: 1.9rem; margin: 2rem 0 0.25rem; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 0.6rem; }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 0.4rem; }
+code { font-size: 0.9em; background: var(--vlak); padding: 0.1em 0.35em; border-radius: 4px; }
+.datum { color: var(--zacht); margin-top: 0; }
+
+/* Startpagina */
+.kop { text-align: center; padding: 3rem 0 1rem; }
+.kop img { width: 100%; max-width: 30rem; height: auto; }
+.kop h1 { position: absolute; left: -9999px; }
+.zin { font-size: 1.2rem; text-align: center; margin: 1rem 0 2rem; }
+
+.kanalen { display: grid; gap: 0.75rem; margin: 0 auto 1rem; max-width: 26rem; }
+.knop {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  padding: 0.85rem 1.1rem; border: 1px solid var(--lijn); border-radius: 10px;
+  background: var(--vlak); text-decoration: none; font-weight: 600;
+}
+.knop span { color: var(--zacht); font-weight: 400; font-size: 0.92rem; }
+.knop.hoofd { background: var(--rood); border-color: var(--rood); font-size: 1.1rem; padding: 1rem 1.2rem; }
+.knop.hoofd span { color: var(--tekst); opacity: 0.85; }
+.knop:hover { border-color: var(--tekst); color: var(--tekst); }
+
+.shorts { list-style: none; padding: 0; margin: 0; }
+.shorts li { padding: 1rem 0; border-top: 1px solid var(--lijn); }
+.shorts li:last-child { border-bottom: 1px solid var(--lijn); }
+.shorts .titel { font-weight: 600; font-size: 1.05rem; }
+.shorts .info { color: var(--zacht); font-size: 0.92rem; margin-top: 0.25rem; overflow-wrap: anywhere; }
+.shorts .info a { color: var(--zacht); }
+.uitleg { color: var(--zacht); font-size: 0.92rem; }
+
+/* Tekstpagina's */
+.terug { display: inline-block; margin-top: 1.5rem; }
+.tekst ul, .tekst ol { padding-left: 1.3rem; }
+.tekst li { margin: 0.35rem 0; }
+
+footer {
+  margin-top: 3rem; padding-top: 1.2rem; padding-bottom: 2.5rem;
+  border-top: 1px solid var(--lijn); color: var(--zacht); font-size: 0.92rem;
+}
+footer a { color: var(--zacht); }
+footer p { margin: 0.3rem 0; }
