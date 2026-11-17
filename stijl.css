@@ -42,7 +42,8 @@ code { font-size: 0.9em; background: var(--vlak); padding: 0.1em 0.35em; border-
 .kop { text-align: center; padding: 3rem 0 1rem; }
 .kop img { width: 100%; max-width: 30rem; height: auto; }
 .kop h1 { position: absolute; left: -9999px; }
-.zin { font-size: 1.2rem; text-align: center; margin: 1rem 0 2rem; }
+.zin { font-size: 1.2rem; text-align: center; margin: 1rem 0 0.5rem; }
+.uitnodiging { color: var(--zacht); text-align: center; max-width: 30rem; margin: 0 auto 2rem; }
 
 .kanalen { display: grid; gap: 0.75rem; margin: 0 auto 1rem; max-width: 26rem; }
 .knop {
@@ -50,13 +51,18 @@ code { font-size: 0.9em; background: var(--vlak); padding: 0.1em 0.35em; border-
   padding: 0.85rem 1.1rem; border: 1px solid var(--lijn); border-radius: 10px;
   background: var(--vlak); text-decoration: none; font-weight: 600;
 }
-.knop span { color: var(--zacht); font-weight: 400; font-size: 0.92rem; }
+.knop .naam { display: flex; align-items: center; gap: 0.7rem; }
+.knop .logo { width: 22px; height: 22px; flex: none; }
+.knop .handle { color: var(--zacht); font-weight: 400; font-size: 0.92rem; }
 .knop.hoofd { background: var(--rood); border-color: var(--rood); font-size: 1.1rem; padding: 1rem 1.2rem; }
-.knop.hoofd span { color: var(--tekst); opacity: 0.85; }
+.knop.hoofd .handle { color: var(--tekst); opacity: 0.85; }
 .knop:hover { border-color: var(--tekst); color: var(--tekst); }
 
 .shorts { list-style: none; padding: 0; margin: 0; }
-.shorts li { padding: 1rem 0; border-top: 1px solid var(--lijn); }
+.shorts li { padding: 1rem 0; border-top: 1px solid var(--lijn); display: flex; gap: 1rem; align-items: center; }
+.shorts li > div { min-width: 0; }
+.shorts .thumb { flex: none; display: block; line-height: 0; }
+.shorts .thumb img { width: 72px; height: 128px; object-fit: cover; border-radius: 6px; border: 1px solid var(--lijn); }
 .shorts li:last-child { border-bottom: 1px solid var(--lijn); }
 .shorts .titel { font-weight: 600; font-size: 1.05rem; }
 .shorts .info { color: var(--zacht); font-size: 0.92rem; margin-top: 0.25rem; overflow-wrap: anywhere; }
